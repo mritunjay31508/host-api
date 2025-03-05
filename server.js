@@ -8,7 +8,7 @@ const port =3003;
 
 // MongoDB से कनेक्ट करें
 
-mongoose.connect('mongodb://127.0.0.1:27017/student_enquiry', {
+mongoose.connect('mongodb://127.0.0.1:27017/student-enq ', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
@@ -25,11 +25,11 @@ const productController = require('./controller/productController');
 app.use(express.json());
 
 // Routes
-app.get('/products', productController.getAllProducts);
-app.get('/products/:id', productController.getProductById);
-app.post('/products', productController.createProduct);
-app.put('/products/:id', productController.updateProduct);    // Update route
-app.delete('/products/:id', productController.deleteProduct); // Delete route
+app.get('/students', productController.getAllProducts);
+app.get('/students/:id', productController.getProductById);
+app.post('/students', productController.createProduct);
+app.put('/students/:id', productController.updateProduct);    // Update route
+app.delete('/students/:id', productController.deleteProduct); // Delete route
 
 
 app.listen(port, () => {
